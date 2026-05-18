@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stumble Guys Web</title>
+    <title>Stumble Guys Unblocked</title>
     <style>
-        body { margin: 0; padding: 0; background-color: #000; overflow: hidden; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         iframe { width: 100vw; height: 100vh; border: none; }
     </style>
+    <!-- Polyfill framework to allow custom iframe behaviors -->
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <!-- The engine script that automatically strips the security block -->
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
 </head>
 <body>
-    <!-- Replace URL below with your working game source URL -->
-    <iframe src="https://example-game-provider.com"></iframe>
+    <!-- Notice the 'is="x-frame-bypass"' attribute added below -->
+    <iframe is="x-frame-bypass" src="https://stumbleguys.com"></iframe>
 </body>
 </html>
